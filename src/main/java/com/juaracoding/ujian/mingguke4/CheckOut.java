@@ -10,7 +10,7 @@ import com.juaracoding.ujian.Drivers.DriverSingleton;
 
 public class CheckOut {
 
-	private  WebDriver driver;
+	private WebDriver driver;
 
 	public CheckOut() {
 		this.driver = DriverSingleton.getDriver();
@@ -43,43 +43,43 @@ public class CheckOut {
 
 	@FindBy(xpath = "//input[@id='billing_phone']")
 	private WebElement PhoneNumber;
-	//input[@id='terms']
+	// input[@id='terms']
 	@FindBy(xpath = "//span[@class='woocommerce-terms-and-conditions-checkbox-text']")
 	private WebElement ChkBoxTerms;
 
-	@FindBy(xpath = "//button[@id='place_order']")	
+	@FindBy(xpath = "//button[@id='place_order']")
 	private WebElement BtnPlaceOrder;
-	
+
 	@FindBy(xpath = "//p[@class='woocommerce-thankyou-order-received']")
 	private WebElement getSucces;
-	
-	@FindBy(xpath = "//span[@id='select2-billing_country-container']")	
+
+	@FindBy(xpath = "//span[@id='select2-billing_country-container']")
 	private WebElement BtnRegion;
-	
-	@FindBy(xpath = "//span[@id='select2-billing_state-container']")	
+
+	@FindBy(xpath = "//span[@id='select2-billing_state-container']")
 	private WebElement BtnState;
-	
+
 	public void isiCekOut() {
 		FirstName.sendKeys("jacob");
 		LastName.sendKeys("bambang");
 		CompanyName.sendKeys("Juara coding");
 		BtnRegion.click();
-		isi.sendKeys("Indonesia",Keys.ENTER);
+		isi.sendKeys("Indonesia", Keys.ENTER);
 		Adress.sendKeys("jln kecebong makan durian no 69");
 		BtnState.click();
-		isi.sendKeys("Bali",Keys.ENTER);
+		isi.sendKeys("Bali", Keys.ENTER);
 		City.sendKeys("denpasar");
 		PostCode.sendKeys("80111");
 		PhoneNumber.sendKeys("0888886913645");
-			System.out.println("Berhasil Mengisi Data Pembelian");
+		System.out.println("Berhasil Mengisi Data Pembelian");
 	}
-	
+
 	public void ChkAndBtn() {
 		ChkBoxTerms.click();
 		BtnPlaceOrder.click();
-			System.out.println("mengkonfirmasi checkout");
+		System.out.println("mengkonfirmasi checkout");
 	}
-	
+
 	public String Succes() {
 		return getSucces.getText();
 	}

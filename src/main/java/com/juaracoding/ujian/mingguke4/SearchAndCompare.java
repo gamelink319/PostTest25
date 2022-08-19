@@ -61,21 +61,21 @@ public class SearchAndCompare {
 
 	public void AddToCart() {
 		BtnAddToCart.click();
-			System.out.println("Berhasil Memasukan ke dalam Keranjang");
+		System.out.println("Berhasil Memasukan ke dalam Keranjang");
 	}
 
 	public void Compare() {
 		BtnCompare.click();
-			System.out.println("Menekan Tombol Compare");
+		System.out.println("Menekan Tombol Compare");
 	}
 
 	public void CloseCompare() {
 		BtnCloseCompare.click();
-			System.out.println("menutup Compare");
+		System.out.println("menutup Compare");
 	}
 
 	public void Checkout() {
 		BtnChoose.click();
-			System.out.println("Membuka Page CheckOut");
+		System.out.println("Membuka Page CheckOut");
 	}
 }

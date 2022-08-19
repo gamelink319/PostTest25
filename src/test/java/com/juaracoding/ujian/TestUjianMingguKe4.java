@@ -37,25 +37,25 @@ public class TestUjianMingguKe4 {
 		search = new SearchAndCompare();
 		check = new CheckOut();
 	}
-	
+
 	@Test(priority = 1)
 	public void testregister() {
 		Register.RegShop();
 		delay(4);
 	}
-	
-	@Test(priority =2)
+
+	@Test(priority = 2)
 	public void testlogin() {
 		Login.loginShop();
 		delay(4);
 	}
-	
+
 	@Test(priority = 3)
 	public void testsearchandcompare() {
 		search.Search("black lux");
 		delay(5);
 		scroll(300);
-		search.ColorAndSize("black","34");
+		search.ColorAndSize("black", "34");
 		search.AddToCart();
 		search.Compare();
 		delay(3);
@@ -66,7 +66,7 @@ public class TestUjianMingguKe4 {
 		search.Search("playboy x");
 		delay(3);
 		scroll(300);
-		search.ColorAndSize("grey","40");
+		search.ColorAndSize("grey", "40");
 		delay(1);
 		search.AddToCart();
 		delay(1);
@@ -78,7 +78,7 @@ public class TestUjianMingguKe4 {
 		search.Checkout();
 		delay(3);
 	}
-	
+
 	@Test(priority = 4)
 	public void testcheckout() {
 		scroll(300);
@@ -87,41 +87,11 @@ public class TestUjianMingguKe4 {
 		check.ChkAndBtn();
 		delay(7);
 		scroll(900);
-		String x ="Thank you. Your order has been received.";
+		String x = "Thank you. Your order has been received.";
 		assertEquals(check.Succes(), x);
-			System.out.println("Test Berhasil");
+		System.out.println("Test Berhasil");
 	}
-	
-	@Test (enabled = false)
-	public void Latihan() {
-		Register.alert();
-		search.Search("playboy x");
-		delay(3);
-		scroll(300);
-		search.ColorAndSize("grey","40");
-		delay(1);
-		search.AddToCart();
-		delay(1);
-		search.Compare();
-		delay(3);
-		search.CloseCompare();
-		delay(3);
-		scroll(-300);
-		search.Checkout();
-		delay(10);
-		scroll(900);
-		check.isiCekOut();
-		delay(2);
-		check.ChkAndBtn();
-		delay(20);
-		scroll(300);
-		String x ="Thank you. Your order has been received.";
-		assertEquals(check.Succes(), x);
-			System.out.println("Test Berhasil");
-	}
-	
-	
-	
+
 	@AfterClass
 	public void CloseBrowser() {
 		delay(5);

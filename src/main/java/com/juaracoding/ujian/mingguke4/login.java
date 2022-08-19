@@ -31,7 +31,7 @@ public class login {
 		isiuser.sendKeys(user);
 		System.out.println("mengisi login username/email :" + user);
 		isipass.sendKeys(password);
-		System.out.println("mengisi login password" );
+		System.out.println("mengisi login password");
 		btnLogin.click();
 		System.out.println("klik tombol login");
 	}

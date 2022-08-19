@@ -46,15 +46,15 @@ public class register {
 		System.out.println("masuk ke account perdaftaran");
 		delay(5);
 		isinama.sendKeys(reguser);
-		System.out.println("mengisi nama :"+reguser);
+		System.out.println("mengisi nama :" + reguser);
 		isiemail.sendKeys(regemail);
-		System.out.println("mengisi email :"+regemail);
+		System.out.println("mengisi email :" + regemail);
 		isipassword.sendKeys(regpass);
 		System.out.println("mengisi password ");
 		btnReg.click();
 		System.out.println("klik tombol register");
 	}
-	
+
 	public void alert() {
 		btndismiss.click();
 	}
