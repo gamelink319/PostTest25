@@ -37,6 +37,11 @@ public class TestUjianMingguKe4 {
 		search = new SearchAndCompare();
 		check = new CheckOut();
 	}
+	@Test
+	public void test() {
+		check.ChkAndBtn();
+		delay(4);
+	}
 
 	@Test(priority = 1)
 	public void testregister() {

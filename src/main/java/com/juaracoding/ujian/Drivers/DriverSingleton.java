@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import com.juaracoding.ujian.DriverStrategies.DriverStrategy;
 import com.juaracoding.ujian.DriverStrategies.DriverStrategyImplementer;
 
+import Utils.Constants;
+
 public class DriverSingleton {
 
 	private static DriverSingleton instance = null;
@@ -18,7 +20,7 @@ public class DriverSingleton {
 	public WebDriver instantiate(String strategy) {
 		DriverStrategy driverStrategy = DriverStrategyImplementer.chooseStategy(strategy);
 		driver = driverStrategy.setStrategy();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Constants.TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();	
 		return driver;
 	}

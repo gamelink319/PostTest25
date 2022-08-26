@@ -40,6 +40,9 @@ public class CheckOut {
 
 	@FindBy(xpath = "//input[@id='billing_postcode']")
 	private WebElement PostCode;
+	
+	@FindBy(xpath = "//input[@id='billing_email']")
+	private WebElement Email;
 
 	@FindBy(xpath = "//input[@id='billing_phone']")
 	private WebElement PhoneNumber;
@@ -71,15 +74,19 @@ public class CheckOut {
 		City.sendKeys("denpasar");
 		PostCode.sendKeys("80111");
 		PhoneNumber.sendKeys("0888886913645");
+		Email.sendKeys("dhannaputra4@gmail.com");
 		System.out.println("Berhasil Mengisi Data Pembelian");
 	}
 
 	public void ChkAndBtn() {
 		ChkBoxTerms.click();
-		BtnPlaceOrder.click();
 		System.out.println("mengkonfirmasi checkout");
 	}
-
+	
+	public void CheckPlaceOrder() {
+		BtnPlaceOrder.click();
+	}
+	
 	public String Succes() {
 		return getSucces.getText();
 	}
