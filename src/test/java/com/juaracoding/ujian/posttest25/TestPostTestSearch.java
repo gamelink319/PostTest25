@@ -1,4 +1,4 @@
-package com.juaracoding.ujian.posttest26;
+package com.juaracoding.ujian.posttest25;
 
 import org.openqa.selenium.WebDriver;
 
@@ -19,7 +19,7 @@ public class TestPostTestSearch {
 	private SearchAndCompare search = new SearchAndCompare();;
 
 	public TestPostTestSearch() {
-		driver = HooksPosttest26.driver;
+		driver = HooksPosttest25.driver;
 	}
 
 	@Given("User go to web shop")
@@ -38,8 +38,8 @@ public class TestPostTestSearch {
 	@When("User click Search first item")
 	public void User_click_Search_first_item() {
 		search.Search("black lux");
-		HooksPosttest26.delay(5);
-		HooksPosttest26.scroll(300);
+		HooksPosttest25.delay(5);
+		HooksPosttest25.scroll(300);
 		search.ColorAndSize("black", "34");
 		System.out.println("Search dan input color size (1)");
 
@@ -54,31 +54,31 @@ public class TestPostTestSearch {
 	@Then("User click Search second cart")
 	public void User_click_Searc_second_cart() {
 		search.Search("playboy x");
-		HooksPosttest26.delay(3);
-		HooksPosttest26.scroll(300);
+		HooksPosttest25.delay(3);
+		HooksPosttest25.scroll(300);
 		search.ColorAndSize("grey", "40");
 		System.out.println("Search dan input color size (2)");
 	}
 
 	@And("User add Second item to cart")
 	public void User_add_Second_item_to_cart() {
-		HooksPosttest26.delay(2);
+		HooksPosttest25.delay(2);
 		search.AddToCart();
 		System.out.println("add item ke dalam keranjang (2)");
-		HooksPosttest26.delay(3);
+		HooksPosttest25.delay(3);
 	}
 
 	@Then("User click view cart")
 	public void User_click_view_cart() {
-		HooksPosttest26.scroll(-600);
-		HooksPosttest26.delay(3);
+		HooksPosttest25.scroll(-600);
+		HooksPosttest25.delay(3);
 		search.GotoCart();
 		System.out.println("Click view cart");
 	}
 
 	@And("User click view Checkout")
 	public void User_click_view_Checkout() {
-		HooksPosttest26.scroll(600);
+		HooksPosttest25.scroll(600);
 		search.Checkout();
 		System.out.println("Click view Checkout");
 	}

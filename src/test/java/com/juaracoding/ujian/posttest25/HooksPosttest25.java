@@ -1,4 +1,4 @@
-package com.juaracoding.ujian.posttest26;
+package com.juaracoding.ujian.posttest25;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import Utils.Constants;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 
-public class HooksPosttest26 {
+public class HooksPosttest25 {
 	public static WebDriver driver;
 
 	@Before

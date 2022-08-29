@@ -1,4 +1,4 @@
-package com.juaracoding.ujian.posttest26;
+package com.juaracoding.ujian.posttest25;
 
 import static org.testng.Assert.assertEquals;
 
@@ -14,15 +14,15 @@ public class TestPostTestCheckout {
 	private CheckOut check = new CheckOut();
 
 	public TestPostTestCheckout() {
-		driver = HooksPosttest26.driver;
+		driver = HooksPosttest25.driver;
 	}
 
 	@When("User input data")
 	public void User_input_data() {
-		HooksPosttest26.delay(5);
-		HooksPosttest26.scroll(300);
+		HooksPosttest25.delay(5);
+		HooksPosttest25.scroll(300);
 		check.isiCekOut();
-		HooksPosttest26.delay(3);
+		HooksPosttest25.delay(3);
 		check.ChkAndBtn();
 		System.out.println("memasukan data checkout");
 	}
@@ -30,8 +30,8 @@ public class TestPostTestCheckout {
 	@And("User click checkout")
 	public void User_click_checkout() {
 		check.CheckPlaceOrder();
-		HooksPosttest26.delay(3);
-		HooksPosttest26.scroll(900);
+		HooksPosttest25.delay(3);
+		HooksPosttest25.scroll(900);
 		System.out.println("Click place order");
 	}
 
