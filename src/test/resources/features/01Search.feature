@@ -1,4 +1,4 @@
-Feature: Search and Checkout shop
+Feature: Search shop
 
 Scenario: Navigate to shop
 	Given User go to web shop
@@ -10,9 +10,4 @@ Scenario: User Add item
    Then User click Search second cart
    And User add Second item to cart
    Then User click view cart
-   And User click view Checkout  
-       
- Scenario: User checkout
-    When User input data
-    And User click checkout
-    Then User Your order has been received  
+   And User click view Checkout        

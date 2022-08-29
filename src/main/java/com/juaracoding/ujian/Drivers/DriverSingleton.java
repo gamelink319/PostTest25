@@ -31,6 +31,10 @@ public class DriverSingleton {
 			instance = new DriverSingleton(drive);
 		}
 		return instance;
+		
+	}
+	public static void CloseObjectInstance() {
+		driver.quit();
 	}
 	
 	//method
