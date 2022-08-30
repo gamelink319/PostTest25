@@ -44,6 +44,7 @@ public class SearchAndCompare {
 	@FindBy(xpath = "//a[@class='checkout-button button alt wc-forward']")
 	private WebElement BtnCheckout;
 	//a[contains(text(),'Checkout')]
+	
 	public void Search(String isi) {
 		btnSearch.click();
 		System.out.println("Btn Search Telah Di klik");
